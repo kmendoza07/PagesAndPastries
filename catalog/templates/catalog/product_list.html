@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Products (Placeholder)</h1>
+  {% if product_list %}
+  <ul>
+    {% for product in product_list %}
+      <div>
+        <a href="{{ product.get_absolute_url }}">{{ product.product_name }}</a>
+          <p>Image Placeholder</p>
+          <p>{{product.product_price}}</p>
+      </div>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no items in current display.</p>
+  <p>Navbar placeholder</p>
+  {% endif %}
+{% endblock %}
